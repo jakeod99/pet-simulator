@@ -1,5 +1,5 @@
 # Pet Simulator
-Pet Simulator Web App for SWEN-365.
+Pet Simulator Web App for SWEN-356.
 
 [Our Trello](https://trello.com/petsimulator/home)
 
