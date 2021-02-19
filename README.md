@@ -1,4 +1,4 @@
-[![CI Actions Status](https://github.com/jakeod99/pet-simulator/workflows/build-ci/badge.svg)](https://github.com/jakeod99/pet-simulator/actions)
+[![CI Actions Status](https://github.com/jakeod99/pet-simulator/workflows/CI/badge.svg)](https://github.com/jakeod99/pet-simulator/actions)
 
 # Pet Simulator
 Pet Simulator Web App for SWEN-356.
