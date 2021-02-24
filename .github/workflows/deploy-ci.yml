@@ -18,6 +18,11 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
 
+      - name: Installing
+        run: |
+          echo Installing dependencies
+          npm install
+
       - name: Deploying
         run: |
           echo Deploying to GitHub Pages
