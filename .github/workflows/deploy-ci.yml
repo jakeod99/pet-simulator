@@ -27,7 +27,7 @@ jobs:
         run: |
           echo Setting workflow's git configuration to use Jake's account
           git config user.email "jakeod99@gmail.com"
-          git config user.name "Jake O'Donnell"
+          git config user.name "jakeod99"
 
       - name: Deploying
         run: |
