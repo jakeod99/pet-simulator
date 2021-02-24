@@ -17,22 +17,17 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
-      - uses: oleksiyrudenko/gha-git-credentials@v2-latest
-        with:
-          token: '${{ secrets.GITHUB_TOKEN }}'
 
       - name: Installing Dependencies
         run: |
           echo Installing dependencies
           npm install
 
-      - name: Configuring Git
-        run: |
-          echo Setting workflow git configuration to use Jakes account
-          git config user.email "jakeod99@gmail.com"
-          git config user.name "Jake O'Donnell"
-
       - name: Deploying
         run: |
+          echo Setting workflow git configuration to use Jakes account
+          git config --global user.email "jakeod99@gmail.com"
+          git config --global user.name "Jake O'Donnell"
+          git remote set-url origin https://${{ secrets.DEPLOY_ACCESS_TOKEN }}@github.com/${{ github.repository }}
           echo Deploying to GitHub Pages
           npm run deploy
