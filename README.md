@@ -1,13 +1,20 @@
-# Pet Simulator
-Pet Simulator Web App for SWEN-356.
+[![Build Actions Status](https://github.com/jakeod99/pet-simulator/workflows/Build/badge.svg)](https://github.com/jakeod99/pet-simulator/actions) 
+[![Deploy Actions Status](https://github.com/jakeod99/pet-simulator/workflows/Deploy/badge.svg)](https://github.com/jakeod99/pet-simulator/actions)
 
-[Our Trello](https://trello.com/petsimulator/home)
+# Pet Simulator
+Pet Simulator Web App for SWEN-356
+
+Check out the latest hosted deploy [here](https://jakeod99.github.io/pet-simulator)
+
+Also, here's a link to [Our Trello](https://trello.com/petsimulator/home)
 
 ## Contributers
 Jeremy De La Cruz, Bailey Pearson, Amy Do, and Jake O'Donnell
 
 ## Tech Stack
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+CI is handled by Github Actions. It will automatically test/build when a Pull Request is created, and changes to master will automatically deploy to our [github pages instance](https://jakeod99.github.io/pet-simulator) 
 
 ### Available Scripts
 
