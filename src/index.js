@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './pages/App';
-import Styles from './pages/Styles';
+import App from './pages/App.js';
+import Styles from './pages/Styles.js';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';

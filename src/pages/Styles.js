@@ -2,9 +2,9 @@ import '../App.css';
 import React, { Component } from 'react';
 import SportsBaseballIcon from '@material-ui/icons/SportsBaseball';
 import { Button } from 'reactstrap';
-import PageTitle from '../components/PageTitle';
-import GameWindow from '../components/GameWindow';
-import Banner from '../components/Banner';
+import PageTitle from '../components/PageTitle.js';
+import GameWindow from '../components/GameWindow.js';
+import Banner from '../components/Banner.js';
 
 class Styles extends Component {
     render() {
