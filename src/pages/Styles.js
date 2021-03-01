@@ -17,7 +17,7 @@ class Styles extends Component {
                                 <h1> Style References </h1>
                             </div>
                             <i>
-                                This is a reference page for the styles we will be using for the cite. Reference this for questions on how to set up
+                                This is a reference page for the styles we will be using for the site. Reference this for questions on how to set up
                                 various components as well as getting fonts and colors.
                             </i>
                         </div>
