@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/pet-simulator/static/css/main.93e7540e.chunk.css",
-    "main.js": "/pet-simulator/static/js/main.854dfaa4.chunk.js",
-    "main.js.map": "/pet-simulator/static/js/main.854dfaa4.chunk.js.map",
+    "main.js": "/pet-simulator/static/js/main.e2ed4b28.chunk.js",
+    "main.js.map": "/pet-simulator/static/js/main.e2ed4b28.chunk.js.map",
     "runtime-main.js": "/pet-simulator/static/js/runtime-main.3a4a6610.js",
     "runtime-main.js.map": "/pet-simulator/static/js/runtime-main.3a4a6610.js.map",
     "static/css/2.150d169a.chunk.css": "/pet-simulator/static/css/2.150d169a.chunk.css",
@@ -23,6 +23,6 @@
     "static/css/2.150d169a.chunk.css",
     "static/js/2.bd6209ec.chunk.js",
     "static/css/main.93e7540e.chunk.css",
-    "static/js/main.854dfaa4.chunk.js"
+    "static/js/main.e2ed4b28.chunk.js"
   ]
 }
