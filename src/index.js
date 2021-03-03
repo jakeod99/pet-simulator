@@ -12,7 +12,7 @@ ReactDOM.render((
     <Router>
         <Route exact path="/game" component={App} />
         <Route exact path="/styles" component={Styles} />
-        <Route exact path="/" component={StartingPage} />
+        <Route exact path="/pet-simulator" component={StartingPage} />
         
     </Router>
 ), document.getElementById('root'));
