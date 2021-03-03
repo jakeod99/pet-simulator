@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/pet-simulator/static/css/main.93e7540e.chunk.css",
-    "main.js": "/pet-simulator/static/js/main.e2ed4b28.chunk.js",
-    "main.js.map": "/pet-simulator/static/js/main.e2ed4b28.chunk.js.map",
+    "main.js": "/pet-simulator/static/js/main.6ced2d55.chunk.js",
+    "main.js.map": "/pet-simulator/static/js/main.6ced2d55.chunk.js.map",
     "runtime-main.js": "/pet-simulator/static/js/runtime-main.3a4a6610.js",
     "runtime-main.js.map": "/pet-simulator/static/js/runtime-main.3a4a6610.js.map",
     "static/css/2.150d169a.chunk.css": "/pet-simulator/static/css/2.150d169a.chunk.css",
-    "static/js/2.bd6209ec.chunk.js": "/pet-simulator/static/js/2.bd6209ec.chunk.js",
-    "static/js/2.bd6209ec.chunk.js.map": "/pet-simulator/static/js/2.bd6209ec.chunk.js.map",
+    "static/js/2.3161e6e6.chunk.js": "/pet-simulator/static/js/2.3161e6e6.chunk.js",
+    "static/js/2.3161e6e6.chunk.js.map": "/pet-simulator/static/js/2.3161e6e6.chunk.js.map",
     "static/js/3.8db7db3f.chunk.js": "/pet-simulator/static/js/3.8db7db3f.chunk.js",
     "static/js/3.8db7db3f.chunk.js.map": "/pet-simulator/static/js/3.8db7db3f.chunk.js.map",
     "index.html": "/pet-simulator/index.html",
     "static/css/2.150d169a.chunk.css.map": "/pet-simulator/static/css/2.150d169a.chunk.css.map",
     "static/css/main.93e7540e.chunk.css.map": "/pet-simulator/static/css/main.93e7540e.chunk.css.map",
-    "static/js/2.bd6209ec.chunk.js.LICENSE.txt": "/pet-simulator/static/js/2.bd6209ec.chunk.js.LICENSE.txt",
+    "static/js/2.3161e6e6.chunk.js.LICENSE.txt": "/pet-simulator/static/js/2.3161e6e6.chunk.js.LICENSE.txt",
     "static/media/adoption-background.a88ba93d.jpg": "/pet-simulator/static/media/adoption-background.a88ba93d.jpg",
     "static/media/App.css": "/pet-simulator/static/media/background-paw-prints.12f1b563.png",
     "static/media/game-background.85cda086.jpg": "/pet-simulator/static/media/game-background.85cda086.jpg"
@@ -21,8 +21,8 @@
   "entrypoints": [
     "static/js/runtime-main.3a4a6610.js",
     "static/css/2.150d169a.chunk.css",
-    "static/js/2.bd6209ec.chunk.js",
+    "static/js/2.3161e6e6.chunk.js",
     "static/css/main.93e7540e.chunk.css",
-    "static/js/main.e2ed4b28.chunk.js"
+    "static/js/main.6ced2d55.chunk.js"
   ]
 }
