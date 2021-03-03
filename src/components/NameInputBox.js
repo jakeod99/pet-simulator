@@ -11,9 +11,7 @@ function NameInputBox() {
                                placeholder="Pet name"/>
                     </div>
                 </Col>,
-                {/*<div>*/}
-                    <Button style={{borderStyle: 'solid'}} className={"adoptBtn"} style={{borderStyle: 'solid'}}>Adopt</Button>
-                {/*</div>*/}
+                <Button style={{borderStyle: 'solid'}} className={"adoptBtn"}>Adopt</Button>
             </div>
 
         </div>

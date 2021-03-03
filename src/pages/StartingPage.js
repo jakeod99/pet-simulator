@@ -1,7 +1,7 @@
 import '../App.css';
 import React, {Component} from 'react';
 import GameWindow from '../components/GameWindow.js'
-import Example from '../components/PetCarousel.js'
+import PetCarousel from '../components/PetCarousel.js'
 import Banner from '../components/Banner.js'
 import PageTitle from '../components/PageTitle.js'
 
@@ -14,7 +14,7 @@ class StartingPage extends Component {
 
                 <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'space-evenly'}}>
                     <div style={{textAlign: 'center'}}>
-                        <p>Starting Page</p>
+                        <p style={{fontFamily: 'Montserrat, sans-serif', fontSize: '30px'}}>Starting Page</p>
                         <PageTitle/>
                     </div>
 
@@ -23,7 +23,7 @@ class StartingPage extends Component {
                     <GameWindow page={'Adoption'}>
                         <Banner bannerMessage={'Adopt a Pet!'}/>
                         <br/><br/>
-                        <Example/>
+                        <PetCarousel/>
                     </GameWindow>
 
                 </div>

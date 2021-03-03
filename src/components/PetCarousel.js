@@ -1,6 +1,5 @@
 import '../App.css';
 import React, {useState} from 'react';
-import {Row, Col, Button, Form, FormGroup, Label, Input, FormText} from 'reactstrap';
 import NameInputBox from '../components/NameInputBox.js'
 import {
     Carousel,
@@ -24,7 +23,7 @@ const items = [
 ];
 
 
-const Example = (props) => {
+const PetCarousel = (props) => {
     const [activeIndex, setActiveIndex] = useState(0);
     const [animating, setAnimating] = useState(false);
 
@@ -76,4 +75,4 @@ const Example = (props) => {
 ]);
 }
 
-export default Example;
+export default PetCarousel;
