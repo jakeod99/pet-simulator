@@ -6,7 +6,7 @@ Pet Simulator Web App for SWEN-356
 
 Check out the latest hosted deploy [here](https://jakeod99.github.io/pet-simulator)
 
-Also, here's a link to [Our Trello](https://trello.com/petsimulator/home)
+Also, here's a link to our [Trello](https://trello.com/petsimulator/home)
 
 ## Contributers
 Jeremy De La Cruz, Bailey Pearson, Amy Do, and Jake O'Donnell
