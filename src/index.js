@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './pages/App.js';
+import StartingPage from './pages/StartingPage.js';
 import Styles from './pages/Styles.js';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
@@ -11,7 +12,8 @@ ReactDOM.render((
     <Router>
         <Route exact path="/game" component={App} />
         <Route exact path="/styles" component={Styles} />
-        <Route exact path="/" component={App} />
+        <Route exact path="/" component={StartingPage} />
+        
     </Router>
 ), document.getElementById('root'));
 

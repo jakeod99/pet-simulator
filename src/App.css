@@ -7,10 +7,10 @@
     justify-content: center;
     min-height: 100vh;
     background-color: #FDE6E6;
-    
+
 }
 
-.App::before{
+.App::before {
     content: "";
     background-image: url('./assets/background-paw-prints.png');
     background-repeat: repeat;
@@ -32,25 +32,25 @@
     min-height: 100vh;
 }
 
-.btn-secondary{
+.btn-secondary {
     background-color: #A0CED9 !important;
     border-color: #A0CED9 !important;
     font-family: 'Montserrat', sans-serif !important;
 }
 
-.btn-secondary:hover{
+.btn-secondary:hover {
     background-color: #91BEC9 !important;
     border-color: #91BEC9 !important;
 }
 
-.btn-circle{
+.btn-circle {
     width: 50px;
     height: 50px;
     padding: 0px !important;
     border-radius: 35px !important;
 }
 
-.banner{
+.banner {
     width: 100%;
     background-color: #FFA18F;
     border-top-style: solid;
@@ -61,18 +61,18 @@
     align-items: center;
 }
 
-.banner-text{
+.banner-text {
     font-family: 'Montserrat', sans-serif;
     font-size: 30px;
-    color: #FFFFFF; 
+    color: #FFFFFF;
     margin: 0 !important;
 }
 
-.game-window{
-    width: 70vw; 
+.game-window {
+    width: 70vw;
     height: 70vh;
     border-style: solid;
-    border-radius: 20px; 
+    border-radius: 20px;
     padding-top: 20px;
     padding-bottom: 20px;
 }
@@ -85,4 +85,29 @@
     to {
         transform: rotate(360deg);
     }
+
 }
+
+.inputBox {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    margin-left: 230px;
+
+}
+
+.adoptBtn {
+    display: flex;
+    margin-left: 75px;
+}
+
+.carousel {
+
+    margin-left: 340px;
+     margin-down: 120px;
+    width: 300px;
+    height: 300px;
+
+}
+
+
