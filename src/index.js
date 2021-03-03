@@ -8,7 +8,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render((
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
         <Route exact path="/game" component={App} />
         <Route exact path="/styles" component={Styles} />
         <Route exact path="/" component={App} />
