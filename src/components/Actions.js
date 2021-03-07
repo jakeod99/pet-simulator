@@ -1,9 +1,9 @@
 import '../App.css';
 import React, { Component } from 'react';
 import { Button } from 'reactstrap';
-import EatIcon from '@material-ui/icons/Restaurant'
-import DrinkIcon from '@material-ui/icons/LocalDrink'
-import BathIcon from '@material-ui/icons/Bathtub'
+import EatIcon from '@material-ui/icons/Restaurant';
+import DrinkIcon from '@material-ui/icons/LocalDrink';
+import BathIcon from '@material-ui/icons/Bathtub';
 import WalkIcon from '@material-ui/icons/DirectionsRun';
 import PlayIcon from '@material-ui/icons/SportsBaseball';
 import TrainIcon from '@material-ui/icons/Sports';

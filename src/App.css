@@ -8,6 +8,7 @@
     --green: #C6F4D0 !important;
     --white: #FFFFFF !important;
     --black: #111111 !important;
+    --brown: #513B01 !important;
 }
 
 .App {
@@ -108,7 +109,7 @@
 
 .status-bar-container{
     height: calc(35vh - 50px);
-    padding-top: 20px;
+    padding-top: 10px;
     max-width: 35px;
 }
 
@@ -130,10 +131,48 @@
     -webkit-transform-origin: left 0%;
 }
 
-.progress-bar{ /* overwrites reactstrap progress bar default, other approaches failed */
-    background-color: var(--green) !important;
+.progress{ /* overwrites reactstrap progress default */
+    background-color: var(--white) !important;
 }
 
+.progress-bar{ /* overwrites reactstrap progress bar default */
+    background-color: var(--green) !important;    
+    border-right: solid 1px var(--black);
+}
+
+.poop-container{
+    width: 35px;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-content: center;
+}
+
+.hide{
+    opacity: 0;
+}
+
+.thought-bubble-container{
+    width: 100px;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
+}
+
+.thought-bubble{
+    width: 100px;
+    height: 100px;
+    background-image: url('./assets/thought-bubble.png');
+    background-size: cover;
+}
+
+.thought{
+    color: var(--black);
+    margin: 18px 32px;
+}
 
 @keyframes App-logo-spin {
     from {
