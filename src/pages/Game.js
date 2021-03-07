@@ -39,7 +39,7 @@ class Game extends Component {
                             </div>
                             <div class="center-game">
                                 <ThoughtBubble thought={this.MockPet.thought} />
-                                <img src={Animations[this.MockPet.type][this.MockPet.state]} class="pet" />
+                                <img src={Animations[this.MockPet.type][this.MockPet.state]} class="pet" alt="your simulated pet" />
                             </div>
                             <div class="right-game">
                                 <Status health={this.MockPet.health} hunger={this.MockPet.hunger} />
