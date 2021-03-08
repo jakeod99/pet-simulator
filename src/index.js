@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './pages/App.js';
 import StartingPage from './pages/StartingPage.js';
 import Styles from './pages/Styles.js';
 import Game from './pages/Game.js';
