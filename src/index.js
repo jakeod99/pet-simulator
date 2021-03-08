@@ -3,13 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './pages/App.js';
 import Styles from './pages/Styles.js';
+import Game from './pages/Game.js';
 import reportWebVitals from './reportWebVitals';
 import { HashRouter as Router, Route } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render((
     <Router basename={process.env.PUBLIC_URL}>
-        <Route exact path="/game" component={App} /> 
+        <Route exact path="/game" component={Game} /> 
         <Route exact path="/styles" component={Styles} />
         <Route exact path="/" component={App} />
     </Router>

@@ -30,12 +30,12 @@ class Styles extends Component {
                             <h5>Our Color Scheme</h5>
                             <br />
                             <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly' }}>
-                                <div style={{height: '50px', width: '50px', borderStyle: 'solid', borderRadius: '10px', backgroundColor: '#FDE6E6'}} />
-                                <div style={{height: '50px', width: '50px', borderStyle: 'solid', borderRadius: '10px', backgroundColor: '#FFA18F'}} />
-                                <div style={{height: '50px', width: '50px', borderStyle: 'solid', borderRadius: '10px', backgroundColor: '#A0CED9'}} />
-                                <div style={{height: '50px', width: '50px', borderStyle: 'solid', borderRadius: '10px', backgroundColor: '#C6F4D0'}} />
-                                <div style={{height: '50px', width: '50px', borderStyle: 'solid', borderRadius: '10px', backgroundColor: '#FFFFFF'}} />
-                                <div style={{height: '50px', width: '50px', borderStyle: 'solid', borderRadius: '10px', backgroundColor: '#111111'}} />
+                                <div style={{height: '50px', width: '50px', borderStyle: 'solid', borderRadius: '10px', backgroundColor: 'var(--pink)'}} />
+                                <div style={{height: '50px', width: '50px', borderStyle: 'solid', borderRadius: '10px', backgroundColor: 'var(--orange)'}} />
+                                <div style={{height: '50px', width: '50px', borderStyle: 'solid', borderRadius: '10px', backgroundColor: 'var(--blue)'}} />
+                                <div style={{height: '50px', width: '50px', borderStyle: 'solid', borderRadius: '10px', backgroundColor: 'var(--green)'}} />
+                                <div style={{height: '50px', width: '50px', borderStyle: 'solid', borderRadius: '10px', backgroundColor: 'var(--white)'}} />
+                                <div style={{height: '50px', width: '50px', borderStyle: 'solid', borderRadius: '10px', backgroundColor: 'var(--black)'}} />
                             </div>
                         </div>
                     </div>
@@ -66,7 +66,7 @@ class Styles extends Component {
                                 <div style={{textAlign: 'center'}}>
                                     <a style={{fontSize: '25px'}} href="https://material-ui.com/components/material-icons/">Material Icons</a>
                                     <br />
-                                    <Button className="btn-circle"> <SportsBaseballIcon fontSize="large" style={{ color: 'white' }} /> </Button>
+                                    <Button className="btn-circle"> <SportsBaseballIcon fontSize="large" style={{ color: 'var(--white)' }} /> </Button>
                                 </div>
                             </div>
                         </div>
