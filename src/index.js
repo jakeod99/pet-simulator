@@ -4,15 +4,16 @@ import './index.css';
 import App from './pages/App.js';
 import StartingPage from './pages/StartingPage.js';
 import Styles from './pages/Styles.js';
+import Game from './pages/Game.js';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { HashRouter as Router, Route } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render((
-    <Router>
-        <Route exact path="/game" component={App} />
+    <Router basename={process.env.PUBLIC_URL}>
+        <Route exact path="/game" component={Game} /> 
         <Route exact path="/styles" component={Styles} />
-        <Route exact path="/pet-simulator" component={StartingPage} />
+        <Route exact path="/" component={StartingPage} />
         
     </Router>
 ), document.getElementById('root'));

@@ -47,7 +47,7 @@ const PetCarousel = (props) => {
                 onExited={() => setAnimating(false)}
                 key={item.src}
             >
-                <img src={item.src} alt={item.altText}/>
+                <img className={"pet_image"} src={item.src} alt={item.altText} />
             </CarouselItem>
         );
     });
@@ -59,6 +59,7 @@ const PetCarousel = (props) => {
             previous={previous}
             className={"carousel"}
             interval={false}
+            contentContainerCustomStyle={{ alignItems: 'center' }}
         >
             <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex}/>
             {slides}

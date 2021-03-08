@@ -1,16 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Acme&family=Montserrat&display=swap');
 
+:root {
+    --pink: #FDE6E6 !important;
+    --orange: #FFA18F !important;
+    --blue: #A0CED9 !important;
+    --blue-darken: #91BEC9;
+    --green: #C6F4D0 !important;
+    --white: #FFFFFF !important;
+    --black: #111111 !important;
+    --brown: #513B01 !important;
+}
+
 .App {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-color: #FDE6E6;
-
+    background-color: var(--pink);
 }
 
-.App::before {
+.App::before{
     content: "";
     background-image: url('./assets/background-paw-prints.png');
     background-repeat: repeat;
@@ -32,27 +42,27 @@
     min-height: 100vh;
 }
 
-.btn-secondary {
-    background-color: #A0CED9 !important;
-    border-color: #A0CED9 !important;
+.btn-secondary{
+    background-color: var(--blue) !important;
+    border-color: var(--blue) !important;
     font-family: 'Montserrat', sans-serif !important;
 }
 
-.btn-secondary:hover {
-    background-color: #91BEC9 !important;
-    border-color: #91BEC9 !important;
+.btn-secondary:hover{
+    background-color: var(--blue-darken) !important;
+    border-color: var(--blue-darken) !important;
 }
 
-.btn-circle {
+.btn-circle{
     width: 50px;
     height: 50px;
     padding: 0px !important;
     border-radius: 35px !important;
 }
 
-.banner {
+.banner{
     width: 100%;
-    background-color: #FFA18F;
+    background-color: var(--orange);
     border-top-style: solid;
     border-bottom-style: solid;
     display: flex;
@@ -61,22 +71,147 @@
     align-items: center;
 }
 
-.banner-text {
+.banner-text{
     font-family: 'Montserrat', sans-serif;
     font-size: 30px;
-    color: #FFFFFF;
+    color: var(--white); 
     margin: 0 !important;
 }
 
-.game-window {
-    width: 70vw;
+.game-window{
+    width: 70vw; 
     height: 70vh;
     border-style: solid;
-    border-radius: 20px;
+    border-radius: 20px; 
     padding-top: 20px;
     padding-bottom: 20px;
 }
 
+.game-box,
+.left-game,
+.right-game{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    height: calc(70vh - 78px);
+}
+
+.right-game{
+    margin-left: 45px;
+}
+
+.center-game{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.game-display-column{
+    margin: 5px 10px;
+    padding: 5px 0px;
+    width: 70px;
+    border-radius: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--white);
+}
+
+.status-bar-container{
+    height: calc(35vh - 50px);
+    padding-top: 10px;
+    max-width: 35px;
+}
+
+.status-bar{
+    border: solid 2px;
+    border-color: var(--black);
+    min-height: 34px;
+    width: calc(22vh - 30px);
+    margin-top: calc(22vh - 30px);
+}
+
+.status-bar,
+.spin-90{
+    transform: rotate(-90deg);
+    transform-origin: left 0%;
+    -ms-transform: rotate(-90deg);
+    -ms-transform-origin: left 0%;
+    -webkit-transform: rotate(-90deg);
+    -webkit-transform-origin: left 0%;
+}
+
+.progress{ /* overwrites reactstrap progress default */
+    background-color: var(--white) !important;
+}
+
+.progress-bar{ /* overwrites reactstrap progress bar default */
+    background-color: var(--green) !important;    
+    border-right: solid 1px var(--black);
+}
+
+.poop-container{
+    width: 35px;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-content: center;
+}
+
+.hide{
+    opacity: 0;
+}
+
+.thought-bubble-container{
+    width: 100px;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-content: center;
+}
+
+.thought-bubble{
+    width: 100px;
+    height: 100px;
+    background-image: url('./assets/thought-bubble.png');
+    background-size: cover;
+}
+
+.thought{
+    color: var(--black);
+    margin: 18px 32px;
+}
+
+.pet{
+    height: 450px;
+    width: 450px;
+}
+
+@media (max-width : 1050px), (max-height : 910px) {
+    .pet{
+        height: 320px;
+        width: 320px;
+    }
+}
+
+@media (max-width : 860px), (max-height : 725px) {
+    .pet{
+        height: 240px;
+        width: 240px;
+    }
+}
+
+@media (max-width : 735px), (max-height : 620px) {
+    .pet{
+        height: 160px;
+        width: 160px;
+    }
+}
 
 @keyframes App-logo-spin {
     from {
@@ -85,7 +220,6 @@
     to {
         transform: rotate(360deg);
     }
-
 }
 
 
@@ -93,20 +227,15 @@
     width: 350px;
     display: inline-block;
 
-
-
 }
 
 .adoptBtn {
-
      display: inline-block;
      align-self: flex-end;
-
-
 }
 
 .carousel {
-    width: 300px;
+  width: 300px;
     height: 300px;
 }
 
@@ -114,11 +243,14 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    /*flex-direction: row;*/
+
 }
 .inputContainer{
      display: flex;
     flex-direction: row;
     justify-content: center;
 }
-
+.pet_image{
+   width: 100%;
+   margin: auto;
+}

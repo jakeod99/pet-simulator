@@ -1,12 +1,12 @@
 [![Build Actions Status](https://github.com/jakeod99/pet-simulator/workflows/Build/badge.svg)](https://github.com/jakeod99/pet-simulator/actions) 
 [![Deploy Actions Status](https://github.com/jakeod99/pet-simulator/workflows/Deploy/badge.svg)](https://github.com/jakeod99/pet-simulator/actions)
 
-# Pet Simulator
-Pet Simulator Web App for SWEN-356
+# [Pet Simulator](https://jakeod99.github.io/pet-simulator)
+Pet Simulator Web App for Trends in Software Development Processes (SWEN-356 at RIT)
 
 Check out the latest hosted deploy [here](https://jakeod99.github.io/pet-simulator)
 
-Also, here's a link to [Our Trello](https://trello.com/petsimulator/home)
+Also, here's a link to our [Trello](https://trello.com/petsimulator/home)
 
 ## Contributers
 Jeremy De La Cruz, Bailey Pearson, Amy Do, and Jake O'Donnell
