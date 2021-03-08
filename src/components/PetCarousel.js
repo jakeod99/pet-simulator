@@ -1,12 +1,10 @@
 import '../App.css';
 import React, {useState} from 'react';
-// import NameInputBox from '../components/NameInputBox.js'
 import {
     Carousel,
     CarouselItem,
     CarouselControl,
     CarouselIndicators,
-    CarouselCaption
 } from 'reactstrap';
 
 const items = [

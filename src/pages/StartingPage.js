@@ -18,7 +18,6 @@ class StartingPage extends Component {
                     <PageTitle/>
                 </div>
 
-                {/*<div className="StartingPage" class="Page" style={{minHeight: 0}} >*/}
                 <GameWindow page={'Adoption'} style={{display: 'flex', flexDirection: 'row', justifyContent: 'center'}}>
                     <Banner bannerMessage={'Adopt a Pet!'}/>
                     <br/><br/>
@@ -30,7 +29,6 @@ class StartingPage extends Component {
                         <NameInputBox/>
                     </div>
                 </GameWindow>
-                {/*</div>*/}
 
             </div>
         ]);
