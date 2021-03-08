@@ -4,6 +4,7 @@ import GameWindow from '../components/GameWindow.js'
 import PetCarousel from '../components/PetCarousel.js'
 import Banner from '../components/Banner.js'
 import PageTitle from '../components/PageTitle.js'
+import NameInputBox from "../components/NameInputBox";
 
 class StartingPage extends Component {
 
@@ -12,21 +13,25 @@ class StartingPage extends Component {
         return ([
             <div className="App">
 
-                <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'space-evenly'}}>
-                    <div style={{textAlign: 'center'}}>
-                        <p style={{fontFamily: 'Montserrat, sans-serif', fontSize: '30px'}}>Starting Page</p>
-                        <PageTitle/>
-                    </div>
 
+                <div style={{textAlign: 'center'}}>
+                    <PageTitle/>
                 </div>
-                <div className="StartingPage" class="Page" style={{minHeight: 0}}>
-                    <GameWindow page={'Adoption'}>
-                        <Banner bannerMessage={'Adopt a Pet!'}/>
-                        <br/><br/>
+
+                {/*<div className="StartingPage" class="Page" style={{minHeight: 0}} >*/}
+                <GameWindow page={'Adoption'} style={{display: 'flex', flexDirection: 'row', justifyContent: 'center'}}>
+                    <Banner bannerMessage={'Adopt a Pet!'}/>
+                    <br/><br/>
+                    <div className={"carouselContainer"}>
                         <PetCarousel/>
-                    </GameWindow>
+                    </div>
+                    <br/>
+                    <div className={"inputContainer"}>
+                        <NameInputBox/>
+                    </div>
+                </GameWindow>
+                {/*</div>*/}
 
-                </div>
             </div>
         ]);
     }

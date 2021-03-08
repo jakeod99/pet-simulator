@@ -88,26 +88,37 @@
 
 }
 
+
 .inputBox {
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 20px;
-    margin-left: 230px;
+    width: 350px;
+    display: inline-block;
+
+
 
 }
 
 .adoptBtn {
-    display: flex;
-    margin-left: 75px;
+
+     display: inline-block;
+     align-self: flex-end;
+
+
 }
 
 .carousel {
-
-    margin-left: 340px;
-     margin-down: 120px;
     width: 300px;
     height: 300px;
-
 }
 
+.carouselContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    /*flex-direction: row;*/
+}
+.inputContainer{
+     display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
 
