@@ -3,30 +3,26 @@ export const ANIMALS = {
     CAT: 'cat',
 };
 
-export class Pet {
-    healthStat = 100;
-    hungerStat = 100;
+export const STATES = {
+    IDLE: 'idle',
+};
 
-    constructor(name, animal) {
+export const THOUGHTS = {
+    HAPPY: 'happy',
+};
+
+export class Pet {
+    constructor(animal, name) {
         this.name = name;
         this.animal = animal;
+        this.health = 100;
+        this.hunger = 100;
+        this.state = STATES.IDLE;
+        this.thought = THOUGHTS.HAPPY;
+        this.poop = true;
     }
 
-    getName() {
-        return this.name;
-    }
-
-    getAnimal() {
-        return this.animal;
-    }
-
-    getHealth() {
-        return this.healthStat;
-    }
-
-    getHunger() {
-        return this.hungerStat;
-    }
+    // ADD FUNCTIONS HERE TO AFFECT PET STATS
 }
 
 /**

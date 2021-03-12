@@ -11,38 +11,45 @@ import Animations from '../animations.js'
 
 class Game extends Component {
 
-    MockPet = { // basic mock pet object until pet logic is ready to swap in
-        name: "Blobby",
-        type: "blob",
-        state: "idle",
-        poop: true,
-        thought: "happy",
-        health: 80,
-        hunger: 25
+    constructor(props) {
+        super(props);
+        this.state = {
+            pet: props.location.state.pet
+        };
+    }
+
+    buildPetDisplay() {
+        const { name, animal } = this.state.pet;
+        return `${name} the ${animal[0].toUpperCase() + animal.substr(1)}`;
     }
 
     render() {
-        let displayName = this.MockPet.name + " the " + this.MockPet.type[0].toUpperCase() + this.MockPet.type.substr(1);
+        if (!this.state.pet) {
+            console.log(this.props);
+            return 'Wait... where\'s your pet?! :(';
+        }
 
+        const { pet } = this.state;
+        console.log(pet);
         return (
             <div className="App">
                 <div className="Page">
                     <PageTitle />
                     <GameWindow page={'Game'}>
-                        <Banner bannerMessage={displayName}/>
-                        <div class="game-box">
-                            <div class="left-game">
+                        <Banner bannerMessage={this.buildPetDisplay()}/>
+                        <div className="game-box">
+                            <div className="left-game">
                                 <Actions />
-                                <div class={"poop-container " + (this.MockPet.poop ? "" : "hide")}>
+                                <div className={"poop-container " + (pet.poop ? "" : "hide")}>
                                     <FaPoop size="3em" style={{ color: 'var(--brown)' }} /> 
                                 </div>
                             </div>
-                            <div class="center-game">
-                                <ThoughtBubble thought={this.MockPet.thought} />
-                                <img src={Animations[this.MockPet.type][this.MockPet.state]} class="pet" alt="your simulated pet" />
+                            <div className="center-game">
+                                <ThoughtBubble thought={pet.thought} />
+                                <img src={Animations[pet.animal][pet.state]} className="pet" alt="your simulated pet" />
                             </div>
-                            <div class="right-game">
-                                <Status health={this.MockPet.health} hunger={this.MockPet.hunger} />
+                            <div className="right-game">
+                                <Status health={pet.health} hunger={pet.hunger} />
                             </div>
                         </div>
                     </GameWindow>

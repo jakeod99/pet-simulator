@@ -1,5 +1,5 @@
 import '../App.css';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {
     Carousel,
     CarouselItem,
@@ -23,21 +23,36 @@ const PetCarousel = (props) => {
     const [activeIndex, setActiveIndex] = useState(0);
     const [animating, setAnimating] = useState(false);
 
+    // update parent selected pet state with value of altText for selected item
+    const updateParentHandler = idx => {
+        props.handler && props.handler(items[idx].altText);
+    }
+
+    // if user does not change state of carousel, sets default selected animal to idx 0
+    const { selectedPet } = props.getState();
+    useEffect(() => {
+        if (selectedPet === null)
+            updateParentHandler(0);
+    });
+
     const next = () => {
         if (animating) return;
         const nextIndex = activeIndex === items.length - 1 ? 0 : activeIndex + 1;
         setActiveIndex(nextIndex);
+        updateParentHandler(nextIndex);
     }
 
     const previous = () => {
         if (animating) return;
         const nextIndex = activeIndex === 0 ? items.length - 1 : activeIndex - 1;
         setActiveIndex(nextIndex);
+        updateParentHandler(nextIndex);
     }
 
     const goToIndex = (newIndex) => {
         if (animating) return;
         setActiveIndex(newIndex);
+        updateParentHandler(newIndex);
     }
 
     const slides = items.map((item) => {

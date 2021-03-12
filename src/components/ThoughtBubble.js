@@ -15,49 +15,49 @@ class ThoughtBubble extends Component {
         switch (this.props.thought) {
             case "eat":
                 return (
-                    <div class="thought-bubble">
+                    <div className="thought-bubble">
                         <EatIcon className="thought" fontSize="large" /> 
                     </div>
                 );
             case "drink":
                 return (
-                    <div class="thought-bubble">
+                    <div className="thought-bubble">
                         <DrinkIcon className="thought" fontSize="large" /> 
                     </div>
                 );
             case "bath":
                 return (
-                    <div class="thought-bubble">
+                    <div className="thought-bubble">
                         <BathIcon className="thought" fontSize="large" /> 
                     </div>
                 );
             case "walk":
                 return (
-                    <div class="thought-bubble">
+                    <div className="thought-bubble">
                         <WalkIcon className="thought" fontSize="large" /> 
                     </div>
                 );
             case "play":
                 return (
-                    <div class="thought-bubble">
+                    <div className="thought-bubble">
                         <PlayIcon className="thought" fontSize="large" /> 
                     </div>
                 );
             case "train":
                 return (
-                    <div class="thought-bubble">
+                    <div className="thought-bubble">
                         <TrainIcon className="thought" fontSize="large" /> 
                     </div>
                 );
             case "happy":
                 return (
-                    <div class="thought-bubble">
+                    <div className="thought-bubble">
                         <HappyIcon className="thought" fontSize="large" /> 
                     </div>
                 );
             case "sad":
                 return (
-                    <div class="thought-bubble">
+                    <div className="thought-bubble">
                         <SadIcon className="thought" fontSize="large" /> 
                     </div>
                 );
@@ -70,7 +70,7 @@ class ThoughtBubble extends Component {
 
 	render(){
 	    return (
-            <div class="thought-bubble-container">
+            <div className="thought-bubble-container">
                 { this.thoughtBubble() }
             </div>
 	    );
