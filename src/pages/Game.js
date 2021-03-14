@@ -16,6 +16,42 @@ class Game extends Component {
         this.state = {
             pet: props.location.state.pet
         };
+
+        this.cleanPoop = this.cleanPoop.bind(this);
+    }
+
+    /**
+     * This is how to create a ticker that calls a method every second
+     */
+    componentDidMount() {
+        this.poopInterval = setInterval(() => this.poopTimer(), 1000);
+    }
+
+    /**
+     * Need to unmount your intervals when finished to prevent memory leakage
+     */
+    componentWillUnmount() {
+        clearInterval(this.poopInterval);
+    }
+
+    /**
+     * OnClick event for the Poop icon. Calls the cleanedPoop() method in pet and updates the pet state.
+     */
+    cleanPoop() {
+        let pet = this.state.pet;
+        pet.cleanedPoop();
+        this.setState({pet: pet});
+    }
+
+    /**
+     * Ticker method for rerendering the poop. Calls needToPoop() method in pet and updates the pet state if necessary.
+     */
+    poopTimer() {
+        let pet = this.state.pet;
+        let needToPoop = pet.needToPoop()
+        if (needToPoop) {
+            this.setState({pet: pet})
+        }
     }
 
     buildPetDisplay() {
@@ -25,12 +61,11 @@ class Game extends Component {
 
     render() {
         if (!this.state.pet) {
-            console.log(this.props);
             return 'Wait... where\'s your pet?! :(';
         }
 
         const { pet } = this.state;
-        console.log(pet);
+
         return (
             <div className="App">
                 <div className="Page">
@@ -40,8 +75,8 @@ class Game extends Component {
                         <div className="game-box">
                             <div className="left-game">
                                 <Actions />
-                                <div className={"poop-container " + (pet.poop ? "" : "hide")}>
-                                    <FaPoop size="3em" style={{ color: 'var(--brown)' }} /> 
+                                <div className={"poop-container " + (pet.poop ? "" : "hide")} data-testid="poop-container">
+                                    <FaPoop size="3em" style={{ color: 'var(--brown)' }} onClick={this.cleanPoop} data-testid="poop"/> 
                                 </div>
                             </div>
                             <div className="center-game">

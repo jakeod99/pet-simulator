@@ -49,7 +49,7 @@ class StartingPage extends Component {
     }
 
     render() {
-        return ([
+        return (
             <div className="App">
                 <div className="Page">
                     <div style={{textAlign: 'center'}}>
@@ -75,7 +75,7 @@ class StartingPage extends Component {
                     </GameWindow>
                 </div>
             </div>
-        ]);
+        );
     }
 }
 
