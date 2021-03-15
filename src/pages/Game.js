@@ -24,14 +24,14 @@ class Game extends Component {
      * This is how to create a ticker that calls a method every second
      */
     componentDidMount() {
-        this.poopInterval = setInterval(() => this.poopTimer(), 1000);
+        this.interval = setInterval(() => this.petTimer(), 1000);
     }
 
     /**
      * Need to unmount your intervals when finished to prevent memory leakage
      */
     componentWillUnmount() {
-        clearInterval(this.poopInterval);
+        clearInterval(this.interval);
     }
 
     /**
@@ -44,12 +44,12 @@ class Game extends Component {
     }
 
     /**
-     * Ticker method for rerendering the poop. Calls needToPoop() method in pet and updates the pet state if necessary.
+     * Ticker method for seeing if the pet needs updated. Calls updatePet() method in pet and updates the pet state if necessary.
      */
-    poopTimer() {
+    petTimer() {
         let pet = this.state.pet;
-        let needToPoop = pet.needToPoop()
-        if (needToPoop) {
+        let petUpdated = pet.updatePet()
+        if (petUpdated) {
             this.setState({pet: pet})
         }
     }

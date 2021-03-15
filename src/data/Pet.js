@@ -35,9 +35,21 @@ export class Pet {
     }
 
     /**
-     * Called every second. Counts down the number of seconds until its time to display the poop icon again.
+     * Called every second. Calls helper methods that update the pet after a certain number of seconds
+     * Returns true if the pet needs updated.
      */
-    needToPoop(){
+    updatePet(){
+        if (this.poopCooldown()){   //Can just add methods to this if statement
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     * Counts down the number of seconds until its time to display the poop icon again.
+     * Returns true if the pet needs updated.
+     */
+    poopCooldown(){
         this.poopCountdown = this.poopCountdown - 1;
         
         if (this.poopCountdown === 0) {
