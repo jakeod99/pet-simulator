@@ -11,6 +11,10 @@ export const THOUGHTS = {
     HAPPY: 'happy',
 };
 
+export const COUNTDOWNS = {
+    POOP: 60,   //The pet poops every 60 seconds
+}
+
 export class Pet {
     constructor(animal, name) {
         this.name = name;
@@ -19,10 +23,42 @@ export class Pet {
         this.hunger = 100;
         this.state = STATES.IDLE;
         this.thought = THOUGHTS.HAPPY;
-        this.poop = true;
+        this.poop = false;
+        this.poopCountdown = COUNTDOWNS.POOP;
     }
 
-    // ADD FUNCTIONS HERE TO AFFECT PET STATS
+    /**
+     * Called when the pet has had its poop cleaned. Sets poop to false to hide the icon.
+     */
+    cleanedPoop(){
+        this.poop = false;
+    }
+
+    /**
+     * Called every second. Calls helper methods that update the pet after a certain number of seconds
+     * Returns true if the pet needs updated.
+     */
+    updatePet(){
+        if (this.poopCooldown()){   //Can just add methods to this if statement
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     * Counts down the number of seconds until its time to display the poop icon again.
+     * Returns true if the pet needs updated.
+     */
+    poopCooldown(){
+        this.poopCountdown = this.poopCountdown - 1;
+        
+        if (this.poopCountdown === 0) {
+            this.poop = true;
+            this.poopCountdown = COUNTDOWNS.POOP;
+            return true;
+        }
+        return false;
+    }
 }
 
 /**
@@ -42,3 +78,4 @@ export function adoptPet(animal = '', name = '') {
     
     return new Pet(animal, name);
 }
+

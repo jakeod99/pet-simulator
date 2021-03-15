@@ -16,6 +16,42 @@ class Game extends Component {
         this.state = {
             pet: props.location.state.pet
         };
+
+        this.cleanPoop = this.cleanPoop.bind(this);
+    }
+
+    /**
+     * This is how to create a ticker that calls a method every second
+     */
+    componentDidMount() {
+        this.interval = setInterval(() => this.petTimer(), 1000);
+    }
+
+    /**
+     * Need to unmount your intervals when finished to prevent memory leakage
+     */
+    componentWillUnmount() {
+        clearInterval(this.interval);
+    }
+
+    /**
+     * OnClick event for the Poop icon. Calls the cleanedPoop() method in pet and updates the pet state.
+     */
+    cleanPoop() {
+        let pet = this.state.pet;
+        pet.cleanedPoop();
+        this.setState({pet: pet});
+    }
+
+    /**
+     * Ticker method for seeing if the pet needs updated. Calls updatePet() method in pet and updates the pet state if necessary.
+     */
+    petTimer() {
+        let pet = this.state.pet;
+        let petUpdated = pet.updatePet()
+        if (petUpdated) {
+            this.setState({pet: pet})
+        }
     }
 
     buildPetDisplay() {
@@ -38,8 +74,8 @@ class Game extends Component {
                         <div className="game-box">
                             <div className="left-game">
                                 <Actions />
-                                <div className={"poop-container " + (pet.poop ? "" : "hide")}>
-                                    <FaPoop size="3em" style={{ color: 'var(--brown)' }} /> 
+                                <div className={"poop-container " + (pet.poop ? "" : "hide")} data-testid="poop-container">
+                                    <FaPoop size="3em" style={{ color: 'var(--brown)' }} onClick={this.cleanPoop} data-testid="poop"/> 
                                 </div>
                             </div>
                             <div className="center-game">

@@ -40,3 +40,30 @@ test('Pet object prop renders proper name', () => {
   const bannerText = screen.getByText(/Spot the Dog/i);
   expect(bannerText).toBeInTheDocument();
 });
+
+test('No initial poop on game screen', () => {
+  const adoptedPet = Pet.adoptPet('dog', 'Tester');
+  const location = {state: {pet: adoptedPet}}
+  render(<Game location={location}/>);
+    const poop = screen.getByTestId('poop-container');
+    expect(poop).toHaveClass('hide')
+});
+
+test('When poop is true it is displayed', async () => {
+  const adoptedPet = Pet.adoptPet('dog', 'Tester');
+  adoptedPet.poop = true;
+  const location = {state: {pet: adoptedPet}}
+  render(<Game location={location}/>);
+    const poop = screen.getByTestId('poop-container');
+    expect(poop).not.toHaveClass('hide')
+});
+
+test('Clicking the poop cleans it up', async () => {
+  const adoptedPet = Pet.adoptPet('dog', 'Tester');
+  adoptedPet.poop = true;
+  const location = {state: {pet: adoptedPet}}
+  render(<Game location={location}/>);
+    fireEvent.click(screen.getByTestId('poop'), {button: 1})
+    const poop = screen.getByTestId('poop-container');
+    expect(poop).toHaveClass('hide')
+});
