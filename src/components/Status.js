@@ -7,12 +7,12 @@ import HungerIcon from '@material-ui/icons/Restaurant';
 class Status extends Component {
 	render(){
 	    return (
-	    	<div class="game-display-column">
-                <div class="status-bar-container">
+	    	<div className="game-display-column">
+                <div className="status-bar-container">
                     <HealthIcon fontSize="large" style={{ color: 'var(--black)' }} /> 
                     <Progress className="status-bar" value={this.props.health} />
                 </div>
-                <div class="status-bar-container">
+                <div className="status-bar-container">
                     <HungerIcon fontSize="large" style={{ color: 'var(--black)' }} />  
                     <Progress className="status-bar" value={this.props.hunger} />
                 </div>

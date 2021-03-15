@@ -11,7 +11,7 @@ import TrainIcon from '@material-ui/icons/Sports';
 class Actions extends Component {
 	render(){
 	    return (
-	    	<div class="game-display-column">
+	    	<div className="game-display-column">
                 <Button className="btn-circle"> 
                     <EatIcon fontSize="large" style={{ color: 'var(--white)' }} /> 
                 </Button>
