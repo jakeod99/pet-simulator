@@ -65,7 +65,6 @@ class Game extends Component {
         }
 
         const { pet } = this.state;
-
         return (
             <div className="App">
                 <div className="Page">
