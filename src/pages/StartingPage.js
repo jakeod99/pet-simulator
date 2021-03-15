@@ -1,5 +1,5 @@
 import '../App.css';
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import GameWindow from '../components/GameWindow.js'
 import PetCarousel from '../components/PetCarousel.js'
 import Banner from '../components/Banner.js'
@@ -49,33 +49,33 @@ class StartingPage extends Component {
     }
 
     render() {
-        return ([
+        return (
             <div className="App">
                 <div className="Page">
-                    <div style={{textAlign: 'center'}}>
-                        <PageTitle/>
+                    <div style={{ textAlign: 'center' }}>
+                        <PageTitle />
                     </div>
                     <GameWindow page={'Adoption'}
-                        style={{display: 'flex', flexDirection: 'row', justifyContent: 'center'}}
+                        style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center' }}
                         key='gameWindow'>
-                        <Banner bannerMessage={'Adopt a Pet!'}/>
-                        <br/><br/>
+                        <Banner bannerMessage={'Adopt a Pet!'} />
+                        <br /><br />
                         <div className={"carouselContainer"}>
-                            <PetCarousel 
+                            <PetCarousel
                                 handler={this.petTypeHandler}
-                                getState={this.getState}/>
+                                getState={this.getState} />
                         </div>
-                        <br/>
+                        <br />
                         <div className={"inputContainer"}>
-                            <NameInputBox 
+                            <NameInputBox
                                 handler={this.petNameHandler}
                                 submitHandler={this.submitHandler}
-                                getState={this.getState}/>
+                                getState={this.getState} />
                         </div>
                     </GameWindow>
                 </div>
             </div>
-        ]);
+        );
     }
 }
 

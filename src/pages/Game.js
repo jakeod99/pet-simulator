@@ -25,12 +25,10 @@ class Game extends Component {
 
     render() {
         if (!this.state.pet) {
-            console.log(this.props);
             return 'Wait... where\'s your pet?! :(';
         }
 
         const { pet } = this.state;
-        console.log(pet);
         return (
             <div className="App">
                 <div className="Page">
