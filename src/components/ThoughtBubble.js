@@ -15,55 +15,55 @@ class ThoughtBubble extends Component {
         switch (this.props.thought) {
             case "eat":
                 return (
-                    <div className="thought-bubble">
+                    <div className="thought-bubble" data-testid="thought-eat">
                         <EatIcon className="thought" fontSize="large" /> 
                     </div>
                 );
             case "drink":
                 return (
-                    <div className="thought-bubble">
+                    <div className="thought-bubble" data-testid="thought-drink">
                         <DrinkIcon className="thought" fontSize="large" /> 
                     </div>
                 );
             case "bath":
                 return (
-                    <div className="thought-bubble">
+                    <div className="thought-bubble" data-testid="thought-bath">
                         <BathIcon className="thought" fontSize="large" /> 
                     </div>
                 );
             case "walk":
                 return (
-                    <div className="thought-bubble">
+                    <div className="thought-bubble" data-testid="thought-walk">
                         <WalkIcon className="thought" fontSize="large" /> 
                     </div>
                 );
             case "play":
                 return (
-                    <div className="thought-bubble">
+                    <div className="thought-bubble" data-testid="thought-play">
                         <PlayIcon className="thought" fontSize="large" /> 
                     </div>
                 );
             case "train":
                 return (
-                    <div className="thought-bubble">
+                    <div className="thought-bubble" data-testid="thought-train">
                         <TrainIcon className="thought" fontSize="large" /> 
                     </div>
                 );
             case "happy":
                 return (
-                    <div className="thought-bubble">
+                    <div className="thought-bubble" data-testid="thought-happy">
                         <HappyIcon className="thought" fontSize="large" /> 
                     </div>
                 );
             case "sad":
                 return (
-                    <div className="thought-bubble">
+                    <div className="thought-bubble" data-testid="thought-sad">
                         <SadIcon className="thought" fontSize="large" /> 
                     </div>
                 );
             default:
                 return (
-                    <div class="thought-bubble hide"></div>
+                    <div className="thought-bubble hide" data-testid="thought-hidden"></div>
                 );
         }
     }
