@@ -49,10 +49,7 @@ export class Pet {
      * Returns true if the pet needs updated.
      */
     updatePet(){
-        if (this.poopCooldown() || this.thoughtCooldown()){   //Can just add methods to this if statement
-            return true;
-        }
-        return false;
+        return (this.poopCooldown() || this.thoughtCooldown());   //Can just add methods to this if statement
     }
 
     /**
