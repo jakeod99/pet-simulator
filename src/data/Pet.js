@@ -9,6 +9,13 @@ export const STATES = {
 
 export const THOUGHTS = {
     HAPPY: 'happy',
+    SAD: 'sad',
+    TRAIN: 'train',
+    PLAY: 'play',
+    WALK: 'walk',
+    BATH: 'bath',
+    DRINK: 'drink',
+    EAT: 'eat',
 };
 
 // cooldowns are in seconds
@@ -16,6 +23,8 @@ export const COUNTDOWNS = {
     HEALTH: 3,
     HUNGER: 5,
     POOP: 60,
+    THOUGHT_UP: 5, // The thought stays on the screen for 5 seconds
+    THOUGHT: 15, // There are 15 seconds between thoughts
 }
 
 export class Pet {
@@ -25,11 +34,13 @@ export class Pet {
         this.health = 100;
         this.hunger = 100;
         this.state = STATES.IDLE;
-        this.thought = THOUGHTS.HAPPY;
-
+        
+        this.thought = "";
+        this.thoughtCountdown = COUNTDOWNS.THOUGHT;
+        
         this.poop = false;
-
         this.poopCountdown = COUNTDOWNS.POOP;
+        
         this.healthCountdown = COUNTDOWNS.HEALTH;
         this.hungerCountdown = COUNTDOWNS.HUNGER;
     }
@@ -49,6 +60,7 @@ export class Pet {
         // add new cooldown method calls to this array
         const statusCooldowns = [
             this.poopCooldown(),
+            this.thoughtCooldown(),
             this.healthCooldown(),
             this.hungerCooldown(),
         ];
@@ -57,6 +69,10 @@ export class Pet {
         return statusCooldowns.find(cooldown => cooldown) || false;
     }
 
+    /**
+     * Counts down the number of seconds before decrementing the health stat.
+     * Returns true if the pet needs to be updated.
+     */
     healthCooldown() {
         const healthTick = 5;
         this.healthCountdown -= 1;
@@ -74,6 +90,10 @@ export class Pet {
         return false;
     }
 
+    /**
+     * Counts down the number of seconds before decrementing the hunger stat.
+     * Returns true if the pet needs to be updated.
+     */
     hungerCooldown() {
         const hungerTick = 5;
         this.hungerCountdown -= 1;
@@ -104,6 +124,48 @@ export class Pet {
             return true;
         }
         return false;
+    }
+
+    /**
+     * Counts down the number of seconds between updating the thought of the pet.
+     * Returns true if the pet needs updated.
+     */
+    thoughtCooldown(){
+        this.thoughtCountdown = this.thoughtCountdown - 1;
+        if (this.thoughtCountdown === 0){
+            if (this.thought === ""){
+                this.thought = this.determineThoughts();
+                this.thoughtCountdown = COUNTDOWNS.THOUGHT_UP;
+            } else {
+                this.thought = "";
+                this.thoughtCountdown = COUNTDOWNS.THOUGHT;
+            }
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     * Uses the health and hunger bars to determine what the thought bubble will display
+     */
+    determineThoughts(){
+        if (this.health + this.hunger > 175){   // Very happy will display smiley face
+            return THOUGHTS.HAPPY;
+        }
+
+        if (this.health + this.hunger < 50){    // Very sad will display sad face
+            return THOUGHTS.SAD;
+        }
+
+        if (this.hunger < this.health){     // If hungrier display either eat or drink thoughts
+            const hungerThoughts = [THOUGHTS.EAT, THOUGHTS.DRINK];
+            return hungerThoughts[Math.floor(Math.random()*hungerThoughts.length)];
+        }
+
+        if (this.health < this.hunger){     // If less healthy display either trian, play, walk or bath thoughts
+            const healthThoughts = [THOUGHTS.TRAIN, THOUGHTS.PLAY, THOUGHTS.WALK, THOUGHTS.BATH];
+            return healthThoughts[Math.floor(Math.random()*healthThoughts.length)];
+        }
     }
 }
 
