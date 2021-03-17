@@ -11,8 +11,11 @@ export const THOUGHTS = {
     HAPPY: 'happy',
 };
 
+// cooldowns are in seconds
 export const COUNTDOWNS = {
-    POOP: 60,   //The pet poops every 60 seconds
+    HEALTH: 3,
+    HUNGER: 5,
+    POOP: 60,
 }
 
 export class Pet {
@@ -23,8 +26,12 @@ export class Pet {
         this.hunger = 100;
         this.state = STATES.IDLE;
         this.thought = THOUGHTS.HAPPY;
+
         this.poop = false;
+
         this.poopCountdown = COUNTDOWNS.POOP;
+        this.healthCountdown = COUNTDOWNS.HEALTH;
+        this.hungerCountdown = COUNTDOWNS.HUNGER;
     }
 
     /**
@@ -39,7 +46,46 @@ export class Pet {
      * Returns true if the pet needs updated.
      */
     updatePet(){
-        if (this.poopCooldown()){   //Can just add methods to this if statement
+        // add new cooldown method calls to this array
+        const statusCooldowns = [
+            this.poopCooldown(),
+            this.healthCooldown(),
+            this.hungerCooldown(),
+        ];
+
+        // return false only if ALL status cooldowns returned false
+        return statusCooldowns.find(cooldown => cooldown) || false;
+    }
+
+    healthCooldown() {
+        const healthTick = 5;
+        this.healthCountdown -= 1;
+
+        if (this.healthCountdown === 0) {
+            if (this.health > 0) {
+                this.health -= healthTick;
+
+                if (this.health < 0) // if 100 is not evenly divisible by tick 
+                    this.health = 0;
+            }
+            this.healthCountdown = COUNTDOWNS.HEALTH;
+            return true;
+        }
+        return false;
+    }
+
+    hungerCooldown() {
+        const hungerTick = 5;
+        this.hungerCountdown -= 1;
+
+        if (this.hungerCountdown === 0) {
+            if (this.hunger > 0) {
+                this.hunger -= hungerTick;
+
+                if (this.hunger < 0)
+                    this.hunger = 0;
+            } 
+            this.hungerCountdown = COUNTDOWNS.HUNGER;
             return true;
         }
         return false;
