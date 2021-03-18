@@ -1,29 +1,29 @@
 {
   "files": {
     "main.css": "/pet-simulator/static/css/main.08981415.chunk.css",
-    "main.js": "/pet-simulator/static/js/main.b90962da.chunk.js",
-    "main.js.map": "/pet-simulator/static/js/main.b90962da.chunk.js.map",
-    "runtime-main.js": "/pet-simulator/static/js/runtime-main.32f81adc.js",
-    "runtime-main.js.map": "/pet-simulator/static/js/runtime-main.32f81adc.js.map",
+    "main.js": "/pet-simulator/static/js/main.382fcbf4.chunk.js",
+    "main.js.map": "/pet-simulator/static/js/main.382fcbf4.chunk.js.map",
+    "runtime-main.js": "/pet-simulator/static/js/runtime-main.ac1a1ae2.js",
+    "runtime-main.js.map": "/pet-simulator/static/js/runtime-main.ac1a1ae2.js.map",
     "static/css/2.4c97ca4f.chunk.css": "/pet-simulator/static/css/2.4c97ca4f.chunk.css",
-    "static/js/2.ed8f47f4.chunk.js": "/pet-simulator/static/js/2.ed8f47f4.chunk.js",
-    "static/js/2.ed8f47f4.chunk.js.map": "/pet-simulator/static/js/2.ed8f47f4.chunk.js.map",
-    "static/js/3.3f8a14c3.chunk.js": "/pet-simulator/static/js/3.3f8a14c3.chunk.js",
-    "static/js/3.3f8a14c3.chunk.js.map": "/pet-simulator/static/js/3.3f8a14c3.chunk.js.map",
+    "static/js/2.2634ffe1.chunk.js": "/pet-simulator/static/js/2.2634ffe1.chunk.js",
+    "static/js/2.2634ffe1.chunk.js.map": "/pet-simulator/static/js/2.2634ffe1.chunk.js.map",
+    "static/js/3.d36c3b60.chunk.js": "/pet-simulator/static/js/3.d36c3b60.chunk.js",
+    "static/js/3.d36c3b60.chunk.js.map": "/pet-simulator/static/js/3.d36c3b60.chunk.js.map",
     "index.html": "/pet-simulator/index.html",
     "static/css/2.4c97ca4f.chunk.css.map": "/pet-simulator/static/css/2.4c97ca4f.chunk.css.map",
     "static/css/main.08981415.chunk.css.map": "/pet-simulator/static/css/main.08981415.chunk.css.map",
-    "static/js/2.ed8f47f4.chunk.js.LICENSE.txt": "/pet-simulator/static/js/2.ed8f47f4.chunk.js.LICENSE.txt",
+    "static/js/2.2634ffe1.chunk.js.LICENSE.txt": "/pet-simulator/static/js/2.2634ffe1.chunk.js.LICENSE.txt",
     "static/media/adoption-background.a88ba93d.jpg": "/pet-simulator/static/media/adoption-background.a88ba93d.jpg",
     "static/media/App.css": "/pet-simulator/static/media/thought-bubble.10697da6.png",
     "static/media/blob-idle.67c345d5.gif": "/pet-simulator/static/media/blob-idle.67c345d5.gif",
     "static/media/game-background.85cda086.jpg": "/pet-simulator/static/media/game-background.85cda086.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.32f81adc.js",
+    "static/js/runtime-main.ac1a1ae2.js",
     "static/css/2.4c97ca4f.chunk.css",
-    "static/js/2.ed8f47f4.chunk.js",
+    "static/js/2.2634ffe1.chunk.js",
     "static/css/main.08981415.chunk.css",
-    "static/js/main.b90962da.chunk.js"
+    "static/js/main.382fcbf4.chunk.js"
   ]
 }
