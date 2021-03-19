@@ -1,5 +1,5 @@
 import '../App.css';
-import React, { Component } from 'react';
+import React from 'react';
 import { Button } from 'reactstrap';
 import EatIcon from '@material-ui/icons/Restaurant';
 import DrinkIcon from '@material-ui/icons/LocalDrink';
