@@ -2,7 +2,7 @@ export const ANIMALS = {
     DOG: 'dog',
     CAT: 'cat',
     PARROT: 'parrot',
-    SEAL: 'seal',
+    OTTER: 'otter',
     PENGUIN: 'penguin'
 };
 
@@ -23,8 +23,8 @@ export const THOUGHTS = {
 
 // cooldowns are in seconds
 export const COUNTDOWNS = {
-    HEALTH: 3,
-    HUNGER: 5,
+    HEALTH: 5,
+    HUNGER: 9,
     POOP: 60,
     THOUGHT_UP: 5, // The thought stays on the screen for 5 seconds
     THOUGHT: 15, // There are 15 seconds between thoughts

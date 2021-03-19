@@ -92,7 +92,7 @@ class Game extends Component {
                             </div>
                             <div className="center-game">
                                 <ThoughtBubble thought={pet.thought}/>
-                                <img src={Animations[pet.animal][pet.state]} onClick={this.clickPet} className="pet"
+                                <img src={Animations[pet.animal][pet.state].gif} onClick={this.clickPet} className="pet"
                                      alt="your simulated pet"/>
                             </div>
                             <div className="right-game">
