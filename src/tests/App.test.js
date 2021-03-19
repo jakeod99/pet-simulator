@@ -164,3 +164,10 @@ test('Pet hunger decreases properly', () => {
     adoptedPet.hungerCooldown();
     expect(adoptedPet.hunger).toBeLessThan(100);
 });
+// Pet Test
+test('Health increases when the pet is clicked on', () => {
+    const adoptedPet = Pet.adoptPet('cat', 'Tester');
+    adoptedPet.hungerCooldown();
+    adoptedPet.petAnimal();
+    expect(adoptedPet.health).toBe(100);
+});

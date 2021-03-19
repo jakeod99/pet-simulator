@@ -1,12 +1,12 @@
 import '../App.css';
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import PageTitle from '../components/PageTitle.js';
 import GameWindow from '../components/GameWindow.js';
 import Banner from '../components/Banner.js';
 import Actions from '../components/Actions.js';
 import Status from '../components/Status.js';
 import ThoughtBubble from '../components/ThoughtBubble.js';
-import { FaPoop } from "react-icons/fa"; // (F)ont (a)wesome (Poop) - this name cannot change
+import {FaPoop} from "react-icons/fa"; // (F)ont (a)wesome (Poop) - this name cannot change
 import Animations from '../animations.js'
 
 class Game extends Component {
@@ -18,6 +18,7 @@ class Game extends Component {
         };
 
         this.cleanPoop = this.cleanPoop.bind(this);
+        this.clickPet = this.clickPet.bind(this);
     }
 
     /**
@@ -43,6 +44,15 @@ class Game extends Component {
         this.setState({pet: pet});
     }
 
+    clickPet() {
+        let pet = this.state.pet;
+        pet.petAnimal();
+        this.setState({pet: pet});
+        setTimeout(pet.recovered.bind(pet), 1000);  //the pet-gif plays for 1 second
+        this.setState({pet: pet});
+    }
+
+
     /**
      * Ticker method for seeing if the pet needs updated. Calls updatePet() method in pet and updates the pet state if necessary.
      */
@@ -55,7 +65,7 @@ class Game extends Component {
     }
 
     buildPetDisplay() {
-        const { name, animal } = this.state.pet;
+        const {name, animal} = this.state.pet;
         return `${name} the ${animal[0].toUpperCase() + animal.substr(1)}`;
     }
 
@@ -64,26 +74,29 @@ class Game extends Component {
             return 'Wait... where\'s your pet?! :(';
         }
 
-        const { pet } = this.state;
+        const {pet} = this.state;
         return (
             <div className="App">
                 <div className="Page">
-                    <PageTitle />
+                    <PageTitle/>
                     <GameWindow page={'Game'}>
                         <Banner bannerMessage={this.buildPetDisplay()}/>
                         <div className="game-box">
                             <div className="left-game">
-                                <Actions />
-                                <div className={"poop-container " + (pet.poop ? "" : "hide")} data-testid="poop-container">
-                                    <FaPoop size="3em" style={{ color: 'var(--brown)' }} onClick={this.cleanPoop} data-testid="poop"/> 
+                                <Actions/>
+                                <div className={"poop-container " + (pet.poop ? "" : "hide")}
+                                     data-testid="poop-container">
+                                    <FaPoop size="3em" style={{color: 'var(--brown)'}} onClick={this.cleanPoop}
+                                            data-testid="poop"/>
                                 </div>
                             </div>
                             <div className="center-game">
-                                <ThoughtBubble thought={pet.thought} />
-                                <img src={Animations[pet.animal][pet.state]} className="pet" alt="your simulated pet" />
+                                <ThoughtBubble thought={pet.thought}/>
+                                <img src={Animations[pet.animal][pet.state]} onClick={this.clickPet} className="pet"
+                                     alt="your simulated pet"/>
                             </div>
                             <div className="right-game">
-                                <Status health={pet.health} hunger={pet.hunger} />
+                                <Status health={pet.health} hunger={pet.hunger}/>
                             </div>
                         </div>
                     </GameWindow>
