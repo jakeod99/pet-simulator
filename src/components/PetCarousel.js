@@ -6,16 +6,29 @@ import {
     CarouselControl,
     CarouselIndicators,
 } from 'reactstrap';
+import Cat from '../assets/headshots/cat-headshot.png';
+import Parrot from '../assets/headshots/parrot-headshot.png';
+import Penguin from '../assets/headshots/penguin-headshot.png';
+import Seal from '../assets/headshots/seal-headshot.png';
 
 const items = [
     {
-        src: 'https://cdn.iconscout.com/icon/free/png-256/dog-face-tongue-human-friend-33944.png',
-        altText: 'dog'
+        src: Parrot,
+        altText: 'parrot'
     },
     {
-        src: 'https://www.shareicon.net/data/256x256/2015/08/30/93110_cat_512x512.png',
+        src: Cat,
         altText: 'cat'
+    },
+     {
+        src: Penguin,
+        altText: 'penguin'
+    },
+     {
+        src: Seal,
+        altText: 'seal'
     }
+
 ];
 
 
