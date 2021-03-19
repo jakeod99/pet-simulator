@@ -1,29 +1,41 @@
 {
   "files": {
     "main.css": "/pet-simulator/static/css/main.08981415.chunk.css",
-    "main.js": "/pet-simulator/static/js/main.382fcbf4.chunk.js",
-    "main.js.map": "/pet-simulator/static/js/main.382fcbf4.chunk.js.map",
+    "main.js": "/pet-simulator/static/js/main.18e0de1c.chunk.js",
+    "main.js.map": "/pet-simulator/static/js/main.18e0de1c.chunk.js.map",
     "runtime-main.js": "/pet-simulator/static/js/runtime-main.ac1a1ae2.js",
     "runtime-main.js.map": "/pet-simulator/static/js/runtime-main.ac1a1ae2.js.map",
     "static/css/2.4c97ca4f.chunk.css": "/pet-simulator/static/css/2.4c97ca4f.chunk.css",
-    "static/js/2.2634ffe1.chunk.js": "/pet-simulator/static/js/2.2634ffe1.chunk.js",
-    "static/js/2.2634ffe1.chunk.js.map": "/pet-simulator/static/js/2.2634ffe1.chunk.js.map",
+    "static/js/2.d55bb304.chunk.js": "/pet-simulator/static/js/2.d55bb304.chunk.js",
+    "static/js/2.d55bb304.chunk.js.map": "/pet-simulator/static/js/2.d55bb304.chunk.js.map",
     "static/js/3.d36c3b60.chunk.js": "/pet-simulator/static/js/3.d36c3b60.chunk.js",
     "static/js/3.d36c3b60.chunk.js.map": "/pet-simulator/static/js/3.d36c3b60.chunk.js.map",
     "index.html": "/pet-simulator/index.html",
     "static/css/2.4c97ca4f.chunk.css.map": "/pet-simulator/static/css/2.4c97ca4f.chunk.css.map",
     "static/css/main.08981415.chunk.css.map": "/pet-simulator/static/css/main.08981415.chunk.css.map",
-    "static/js/2.2634ffe1.chunk.js.LICENSE.txt": "/pet-simulator/static/js/2.2634ffe1.chunk.js.LICENSE.txt",
+    "static/js/2.d55bb304.chunk.js.LICENSE.txt": "/pet-simulator/static/js/2.d55bb304.chunk.js.LICENSE.txt",
     "static/media/adoption-background.a88ba93d.jpg": "/pet-simulator/static/media/adoption-background.a88ba93d.jpg",
     "static/media/App.css": "/pet-simulator/static/media/thought-bubble.10697da6.png",
     "static/media/blob-idle.67c345d5.gif": "/pet-simulator/static/media/blob-idle.67c345d5.gif",
-    "static/media/game-background.85cda086.jpg": "/pet-simulator/static/media/game-background.85cda086.jpg"
+    "static/media/cat-headshot.5a0a269b.png": "/pet-simulator/static/media/cat-headshot.5a0a269b.png",
+    "static/media/cat-idle.34c97675.gif": "/pet-simulator/static/media/cat-idle.34c97675.gif",
+    "static/media/cat-pet.b128eb87.gif": "/pet-simulator/static/media/cat-pet.b128eb87.gif",
+    "static/media/game-background.85cda086.jpg": "/pet-simulator/static/media/game-background.85cda086.jpg",
+    "static/media/parrot-headshot.8ba0eff9.png": "/pet-simulator/static/media/parrot-headshot.8ba0eff9.png",
+    "static/media/parrot-idle.219864a6.gif": "/pet-simulator/static/media/parrot-idle.219864a6.gif",
+    "static/media/parrot-pet.805343bc.gif": "/pet-simulator/static/media/parrot-pet.805343bc.gif",
+    "static/media/penguin-headshot.6965cf89.png": "/pet-simulator/static/media/penguin-headshot.6965cf89.png",
+    "static/media/penguin-idle.fa8c4a78.gif": "/pet-simulator/static/media/penguin-idle.fa8c4a78.gif",
+    "static/media/penguin-pet.1618b340.gif": "/pet-simulator/static/media/penguin-pet.1618b340.gif",
+    "static/media/seal-headshot.fdc47984.png": "/pet-simulator/static/media/seal-headshot.fdc47984.png",
+    "static/media/seal-idle.ca658fcd.gif": "/pet-simulator/static/media/seal-idle.ca658fcd.gif",
+    "static/media/seal-pet.bcd7cc11.gif": "/pet-simulator/static/media/seal-pet.bcd7cc11.gif"
   },
   "entrypoints": [
     "static/js/runtime-main.ac1a1ae2.js",
     "static/css/2.4c97ca4f.chunk.css",
-    "static/js/2.2634ffe1.chunk.js",
+    "static/js/2.d55bb304.chunk.js",
     "static/css/main.08981415.chunk.css",
-    "static/js/main.382fcbf4.chunk.js"
+    "static/js/main.18e0de1c.chunk.js"
   ]
 }
