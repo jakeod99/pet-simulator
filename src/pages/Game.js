@@ -21,6 +21,7 @@ class Game extends Component {
 
         this.cleanPoop = this.cleanPoop.bind(this);
         this.clickPet = this.clickPet.bind(this);
+        this.petInteraction = this.petInteraction.bind(this);
     }
 
     /**
@@ -47,7 +48,7 @@ class Game extends Component {
     }
 
     /**
-     * All pet interactions
+     * All pet interactions funnel through here to change state, update status, and follow their runtime
      * @param state - A value from the STATES array in Pet.js
      */
     petInteraction(state) {
@@ -59,8 +60,15 @@ class Game extends Component {
         this.setState({pet: pet});
     }
 
+    /**
+     * Triggered by clicking pet
+     */
     clickPet() {
         this.petInteraction(Pet.STATES.PET)
+    }
+
+    careButton(state) {
+        this.petInteraciton(state);
     }
 
     /**
@@ -93,7 +101,7 @@ class Game extends Component {
                         <Banner bannerMessage={this.buildPetDisplay()}/>
                         <div className="game-box">
                             <div className="left-game">
-                                <Actions/>
+                                <Actions petInteraction={this.petInteraction}/>
                                 <div className={"poop-container " + (pet.poop ? "" : "hide")}
                                      data-testid="poop-container">
                                     <FaPoop size="3em" style={{color: 'var(--brown)'}} onClick={this.cleanPoop}
