@@ -9,6 +9,8 @@ import ThoughtBubble from '../components/ThoughtBubble.js';
 import {FaPoop} from "react-icons/fa"; // (F)ont (a)wesome (Poop) - this name cannot change
 import Animations from '../animations.js'
 
+import * as Pet from '../data/Pet';
+
 class Game extends Component {
 
     constructor(props) {
@@ -44,14 +46,22 @@ class Game extends Component {
         this.setState({pet: pet});
     }
 
-    clickPet() {
+    /**
+     * All pet interactions
+     * @param state - A value from the STATES array in Pet.js
+     */
+    petInteraction(state) {
         let pet = this.state.pet;
-        pet.petAnimal();
+        let duration = Animations[pet.animal][state].runtime;
+        pet.updateState(state, duration);
         this.setState({pet: pet});
-        setTimeout(pet.recovered.bind(pet), 1000);  //the pet-gif plays for 1 second
+        setTimeout(pet.idle.bind(pet), duration);
         this.setState({pet: pet});
     }
 
+    clickPet() {
+        this.petInteraction(Pet.STATES.PET)
+    }
 
     /**
      * Ticker method for seeing if the pet needs updated. Calls updatePet() method in pet and updates the pet state if necessary.

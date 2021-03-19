@@ -7,7 +7,14 @@ export const ANIMALS = {
 };
 
 export const STATES = {
-    IDLE: 'idle', PET: 'pet'
+    BATH: 'bath',
+    DRINK: 'drink',
+    EAT: 'eat',
+    IDLE: 'idle', 
+    PET: 'pet',
+    PLAY: 'play',
+    TRAIN: 'train',
+    WALK: 'walk'
 };
 
 export const THOUGHTS = {
@@ -28,7 +35,6 @@ export const COUNTDOWNS = {
     POOP: 60,
     THOUGHT_UP: 5, // The thought stays on the screen for 5 seconds
     THOUGHT: 15, // There are 15 seconds between thoughts
-    PET_DURATION: 5, //the pet gif stays on screen for 3 seconds
 }
 
 
@@ -59,17 +65,24 @@ export class Pet {
     }
 
     /**
-     * set the animal states to being pet. Increment the 'heart' meter  by 5.
+     * Increment the correct meter by a factor corresponding to the states duration.
+     * Set the pet's state. 
+     * params
      */
-    petAnimal() {
-        if (this.health <= 95) {
-            this.health += 5;
-        }else{
-            this.health=100;
+    updateState(state, duration) {
+        if ([STATES.DRINK, STATES.EAT].includes(state)) {
+            this.hunger = Math.min(100, this.hunger + Math.floor(duration / 1000));
+        } else {
+            this.health = Math.min(100, this.health + Math.floor(duration / 1000));
         }
-        this.state = STATES.PET;
+
+        this.state = state;
     }
-   recovered() {
+
+    /**
+     * Reverts the pet's state back to idle
+     */
+    idle() {
         this.state = STATES.IDLE;
     }
 
