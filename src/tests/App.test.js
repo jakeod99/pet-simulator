@@ -23,7 +23,7 @@ test('Adoption generates Pet object', () => {
 });
 
 test('Pet object prop renders proper name', () => {
-    const testPet = Pet.adoptPet('dog', 'Spot');
+    const testPet = Pet.adoptPet('otter', 'Spot');
     const mockProps = {
         location: {
           state: {
@@ -39,7 +39,7 @@ test('Pet object prop renders proper name', () => {
 
 // POOP TESTS
 test('No initial poop on game screen', () => {
-    const adoptedPet = Pet.adoptPet('dog', 'Tester');
+    const adoptedPet = Pet.adoptPet('otter', 'Tester');
     const location = {state: {pet: adoptedPet}};
     render(<Game location={location}/>);
     const poop = screen.getByTestId('poop-container');
@@ -47,7 +47,7 @@ test('No initial poop on game screen', () => {
 });
 
 test('When poop is true it is displayed', async () => {
-    const adoptedPet = Pet.adoptPet('dog', 'Tester');
+    const adoptedPet = Pet.adoptPet('otter', 'Tester');
     adoptedPet.poop = true;
     const location = {state: {pet: adoptedPet}};
     render(<Game location={location}/>);
@@ -56,7 +56,7 @@ test('When poop is true it is displayed', async () => {
 });
 
 test('Clicking the poop cleans it up', async () => {
-    const adoptedPet = Pet.adoptPet('dog', 'Tester');
+    const adoptedPet = Pet.adoptPet('otter', 'Tester');
     adoptedPet.poop = true;
     const location = {state: {pet: adoptedPet}};
     render(<Game location={location}/>);
@@ -68,7 +68,7 @@ test('Clicking the poop cleans it up', async () => {
 
 //THOUGHT TEST
 test('No initial thought on game screen', () => {
-    const adoptedPet = Pet.adoptPet('dog', 'Tester');
+    const adoptedPet = Pet.adoptPet('otter', 'Tester');
     const location = {state: {pet: adoptedPet}};
     render(<Game location={location}/>);
     const thought = screen.getByTestId('thought-hidden');
@@ -76,7 +76,7 @@ test('No initial thought on game screen', () => {
 });
 
 test('When pet is sad the thought appears', () => {
-    const adoptedPet = Pet.adoptPet('dog', 'Tester');
+    const adoptedPet = Pet.adoptPet('otter', 'Tester');
     adoptedPet.thought = "sad";
     const location = {state: {pet: adoptedPet}};
     render(<Game location={location}/>);
@@ -85,7 +85,7 @@ test('When pet is sad the thought appears', () => {
 });
 
 test('When pet is happy the thought appears', () => {
-    const adoptedPet = Pet.adoptPet('dog', 'Tester');
+    const adoptedPet = Pet.adoptPet('otter', 'Tester');
     adoptedPet.thought = "happy";
     const location = {state: {pet: adoptedPet}};
     render(<Game location={location}/>);
@@ -94,7 +94,7 @@ test('When pet is happy the thought appears', () => {
 });
 
 test('When pet thought is eat the thought appears', () => {
-    const adoptedPet = Pet.adoptPet('dog', 'Tester');
+    const adoptedPet = Pet.adoptPet('otter', 'Tester');
     adoptedPet.thought = "eat";
     const location = {state: {pet: adoptedPet}};
     render(<Game location={location}/>);
@@ -103,7 +103,7 @@ test('When pet thought is eat the thought appears', () => {
 });
 
 test('When pet thought is drink the thought appears', () => {
-    const adoptedPet = Pet.adoptPet('dog', 'Tester');
+    const adoptedPet = Pet.adoptPet('otter', 'Tester');
     adoptedPet.thought = "drink";
     const location = {state: {pet: adoptedPet}};
     render(<Game location={location}/>);
@@ -112,7 +112,7 @@ test('When pet thought is drink the thought appears', () => {
 });
 
 test('When pet thought is walk the thought appears', () => {
-    const adoptedPet = Pet.adoptPet('dog', 'Tester');
+    const adoptedPet = Pet.adoptPet('otter', 'Tester');
     adoptedPet.thought = "walk";
     const location = {state: {pet: adoptedPet}};
     render(<Game location={location}/>);
@@ -121,7 +121,7 @@ test('When pet thought is walk the thought appears', () => {
 });
 
 test('When pet thought is train the thought appears', () => {
-    const adoptedPet = Pet.adoptPet('dog', 'Tester');
+    const adoptedPet = Pet.adoptPet('otter', 'Tester');
     adoptedPet.thought = "train";
     const location = {state: {pet: adoptedPet}};
     render(<Game location={location}/>);
@@ -130,7 +130,7 @@ test('When pet thought is train the thought appears', () => {
 });
 
 test('When pet thought is play the thought appears', () => {
-    const adoptedPet = Pet.adoptPet('dog', 'Tester');
+    const adoptedPet = Pet.adoptPet('otter', 'Tester');
     adoptedPet.thought = "play";
     const location = {state: {pet: adoptedPet}};
     render(<Game location={location}/>);
@@ -139,7 +139,7 @@ test('When pet thought is play the thought appears', () => {
 });
 
 test('When pet thought is bath the thought appears', () => {
-    const adoptedPet = Pet.adoptPet('dog', 'Tester');
+    const adoptedPet = Pet.adoptPet('otter', 'Tester');
     adoptedPet.thought = "bath";
     const location = {state: {pet: adoptedPet}};
     render(<Game location={location}/>);
@@ -150,7 +150,7 @@ test('When pet thought is bath the thought appears', () => {
 
 // STATUS METER TESTS
 test('Pet health decreases properly', () => {
-    const adoptedPet = Pet.adoptPet('dog', 'Tester');
+    const adoptedPet = Pet.adoptPet('otter', 'Tester');
     adoptedPet.healthCountdown = 1;
     expect(adoptedPet.health).toBe(100);
     adoptedPet.healthCooldown();
@@ -158,7 +158,7 @@ test('Pet health decreases properly', () => {
 });
 
 test('Pet hunger decreases properly', () => {
-    const adoptedPet = Pet.adoptPet('dog', 'Tester');
+    const adoptedPet = Pet.adoptPet('otter', 'Tester');
     adoptedPet.hungerCountdown = 1;
     expect(adoptedPet.hunger).toBe(100);
     adoptedPet.hungerCooldown();
