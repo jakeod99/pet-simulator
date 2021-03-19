@@ -2,6 +2,7 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import Game from '../pages/Game';
 import StartingPage from '../pages/StartingPage.js';
 import * as Pet from '../data/Pet';
+import Animations from '../animations.js';
 
 
 
@@ -32,7 +33,7 @@ test('Pet object prop renders proper name', () => {
         }
     };
     render(<Game {...mockProps} />);
-    const bannerText = screen.getByText(/Spot the Dog/i);
+    const bannerText = screen.getByText(/Spot the Otter/i);
     expect(bannerText).toBeInTheDocument();
 });
 
@@ -168,6 +169,6 @@ test('Pet hunger decreases properly', () => {
 test('Health increases when the pet is clicked on', () => {
     const adoptedPet = Pet.adoptPet('cat', 'Tester');
     adoptedPet.hungerCooldown();
-    adoptedPet.petAnimal();
+    adoptedPet.updateState(Pet.STATES.PET, Animations.cat.pet.runtime);
     expect(adoptedPet.health).toBe(100);
 });
