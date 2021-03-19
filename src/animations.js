@@ -1,5 +1,5 @@
 // It seems as though react bucks at relative asset paths in favor of importing
-// This aggregates the animation .gifs into a hash with their runtime and looping status
+// This aggregates the animation .gifs into a hash with their runtimes (except idle)
 // If any new animation gifs are uploaded, import them here and add them to the exported hash
 
 import CatBath from './assets/animations/cat/bath.gif';

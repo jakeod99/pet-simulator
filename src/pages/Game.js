@@ -67,10 +67,6 @@ class Game extends Component {
         this.petInteraction(Pet.STATES.PET)
     }
 
-    careButton(state) {
-        this.petInteraciton(state);
-    }
-
     /**
      * Ticker method for seeing if the pet needs updated. Calls updatePet() method in pet and updates the pet state if necessary.
      */
