@@ -9,7 +9,7 @@ import {
 import Cat from '../assets/headshots/cat-headshot.png';
 import Parrot from '../assets/headshots/parrot-headshot.png';
 import Penguin from '../assets/headshots/penguin-headshot.png';
-import Seal from '../assets/headshots/seal-headshot.png';
+import Otter from '../assets/headshots/otter-headshot.png';
 
 const items = [
     {
@@ -20,15 +20,14 @@ const items = [
         src: Cat,
         altText: 'cat'
     },
-     {
+    {
         src: Penguin,
         altText: 'penguin'
     },
-     {
-        src: Seal,
-        altText: 'seal'
+    {
+        src: Otter,
+        altText: 'otter'
     }
-
 ];
 
 
