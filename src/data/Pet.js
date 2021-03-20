@@ -30,8 +30,8 @@ export const THOUGHTS = {
 
 // cooldowns are in seconds
 export const COUNTDOWNS = {
-    HEALTH: 5,
-    HUNGER: 9,
+    HEALTH: 12,
+    HUNGER: 22,
     POOP: 60,
     THOUGHT_UP: 5, // The thought stays on the screen for 5 seconds
     THOUGHT: 15, // There are 15 seconds between thoughts
@@ -71,9 +71,9 @@ export class Pet {
      */
     updateState(state, duration) {
         if ([STATES.DRINK, STATES.EAT].includes(state)) {
-            this.hunger = Math.min(100, this.hunger + Math.floor(duration / 1000));
+            this.hunger = Math.min(100, this.hunger + (Math.floor(duration / 1000) * 1.5));
         } else {
-            this.health = Math.min(100, this.health + Math.floor(duration / 1000));
+            this.health = Math.min(100, this.health + (Math.floor(duration / 1000) * 1.5));
         }
 
         this.state = state;
@@ -108,7 +108,7 @@ export class Pet {
      * Returns true if the pet needs to be updated.
      */
     healthCooldown() {
-        const healthTick = 5;
+        const healthTick = 2;
         this.healthCountdown -= 1;
 
         if (this.healthCountdown === 0) {
@@ -129,7 +129,7 @@ export class Pet {
      * Returns true if the pet needs to be updated.
      */
     hungerCooldown() {
-        const hungerTick = 5;
+        const hungerTick = 2;
         this.hungerCountdown -= 1;
 
         if (this.hungerCountdown === 0) {

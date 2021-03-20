@@ -43,7 +43,7 @@ let animations = {
     cat: {
         bath: {
             gif: CatBath,
-            runtime: 7140
+            runtime: 6000
         },
         drink: {
             gif: CatDrink,
@@ -58,7 +58,7 @@ let animations = {
         },
         pet: {
             gif: CatPet,
-            runtime: 5460
+            runtime: 2500
         },
         play: {
             gif: CatPlay,
@@ -99,7 +99,7 @@ let animations = {
         },
         train: {
             gif: OtterTrain,
-            runtime: 6250
+            runtime: 5000
         },
         walk: {
             gif: OtterWalk,
@@ -146,18 +146,18 @@ let animations = {
         },
         drink: {
             gif: PenguinDrink,
-            runtime: 5500
+            runtime: 3400
         },
         eat: {
             gif: PenguinEat,
-            runtime: 5800
+            runtime: 2900
         },
         idle: {
             gif: PenguinIdle
         },
         pet: {
             gif: PenguinPet,
-            runtime: 6800
+            runtime: 3400
         },
         play: {
             gif: PenguinPlay,
